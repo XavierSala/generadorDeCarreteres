@@ -68,7 +68,10 @@ ho canviaré, o no)
     private static final int MAXKM = 6;
 
     // S'han de desar les dades a la base de dades
-    private static final boolean SAVEDATABASE = false;
+    private static final boolean SAVEDATABASE = false;    
+	  private static final String DATABASE_JDBC = "jdbc:postgresql://localhost/ciutats";
+	  private static final String DATABASE_USER = "postgres";
+	  private static final String DATABASE_PASSWORD = "ies2010";
 ~~~~~~~~~~~~~~~~
 
 ### Què fa el programa?
@@ -87,10 +90,22 @@ Notes:
 
 #### Desa les dades en una base de dades Postgresql
 
-En cas de canviar la constant `SAVEDATABASE` a `true` el generat es guardarà en una base de dades Postgresql anomenada `ciutats`
+En cas de canviar la constant `SAVEDATABASE` a `true` el generat es guardarà en una base de dades segons les característiques definides en les constants `DATABASE`
+
+~~~ java
+	  private static final String DATABASE_JDBC = "jdbc:postgresql://localhost/ciutats";
+	  private static final String DATABASE_USER = "postgres";
+	  private static final String DATABASE_PASSWORD = "ies2010";
+~~~
+
+En el programa només hi he definit el driver JDBC de Postgres o sigui que si es canvia s'haurà d'afegir el
+nou driver.
+
+![BDD](https://raw.githubusercontent.com/utrescu/PaginaPersonal/master/static/images/rectxit4.png)
+
 
 ## TODO 
 
 * Entrada de dades des de la 
-* Permetre personalitzar la base de dades generada i canviar el SGDB
+* Permetre personalitzar la base de dades generada
 * ...

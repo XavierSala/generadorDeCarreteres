@@ -19,8 +19,8 @@ public class NomsDBPostgreSQL extends NomsDBDatabase {
 	private static final String insertCiutat = "INSERT INTO CIUTATS (id, nom) VALUES (?, ?)";
 	private static final String insertCarretera = "INSERT INTO CARRETERES (id1, id2, KM) VALUES (?, ?, ?)";
 
-	public NomsDBPostgreSQL() throws SQLException {		
-		conn = DriverManager.getConnection("jdbc:postgresql://localhost/ciutats", "postgres", "ies2010");
+	public NomsDBPostgreSQL(String jdbc, String usuari, String contrasenya) throws SQLException {		
+		conn = DriverManager.getConnection(jdbc, usuari, contrasenya);
 		init();		
 	}
 	

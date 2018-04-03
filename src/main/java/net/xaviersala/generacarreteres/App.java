@@ -39,6 +39,11 @@ public class App {
 	private static final int MAXKM = 6;
 	
 	private static final boolean SAVEDATABASE = false;
+	private static final String DATABASE_JDBC = "jdbc:postgresql://localhost/ciutats";
+	private static final String DATABASE_USER = "postgres";
+	private static final String DATABASE_PASSWORD = "ies2010";
+			
+	
 
 	private static Random aleatori = new Random();
 	private static Graph graph;
@@ -79,7 +84,7 @@ public class App {
 		// Desar en la base de dades 
 		if (SAVEDATABASE) {
 			try {
-				NomsDB database = new NomsDBPostgreSQL();
+				NomsDB database = new NomsDBPostgreSQL(DATABASE_JDBC, DATABASE_USER, DATABASE_PASSWORD);
 				database.desar(graph);
 			} catch (SQLException e) {
 				System.out.println(e.getMessage());
