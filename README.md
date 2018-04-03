@@ -52,6 +52,7 @@ i rutes entre els pobles.
 Per ara cal canviar les constants del programa `App.java` per poder canviar-ne les opcions (però algun dia
 ho canviaré, o no)
 
+~~~~~~~~~~~~~~~~java
     // Número de pobles que s'han de generar
     private static final int NUMERODEPOBLES = 12;
 
@@ -66,8 +67,9 @@ ho canviaré, o no)
     // Número màxim de Km entre ciutats
     private static final int MAXKM = 6;
 
+    // S'han de desar les dades a la base de dades
     private static final boolean SAVEDATABASE = false;
-
+~~~~~~~~~~~~~~~~
 
 ### Què fa el programa?
 
