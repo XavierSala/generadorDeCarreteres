@@ -1,0 +1,29 @@
+/* graph { */
+/* 	fill-color: #ebfcbb, #D9D78C; */
+/* 	fill-mode: gradient-radial; */
+/* } */
+
+edge {
+	text-alignment: along;
+	text-background-color: white;
+	
+	fill-color: blue;
+	size: 2;
+	text-size: 15;
+	text-color: blue;
+	text-background-mode: plain;
+}
+
+node {
+	fill-mode: dyn-plain;
+	text-style: bold;
+	text-background-color: white;
+	text-background-mode: rounded-box;
+	shape: circle;
+	fill-color: red;
+	stroke-mode: plain;
+	stroke-color: blue;
+	stroke-width: 3;
+	size: 20;
+	text-background-mode: plain;
+}
